@@ -37,10 +37,10 @@ public class MarkdownParseTest {
     }
     @Test
     public void imageFirst() throws IOException {
-        Path fileName = Path.of("imageFirst.md");
+        Path fileName = Path.of("imagefirst.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
-        assertEquals("Test the links from the imagefirst.md", links, links);
+        assertEquals("Test the links from the imagefirst.md", List.of("google.com"), links);
     }
 
 }
