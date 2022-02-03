@@ -25,7 +25,7 @@ public class MarkdownParseTest {
         Path fileName = Path.of("new-one.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
-        assertNotEquals("Test the links from the new-one.md", List.of("google.com"), links);
+        assertEquals("Test the links from the new-one.md", List.of("google.com"), links);
     }
     @Test
     public void newTwo() throws IOException {
