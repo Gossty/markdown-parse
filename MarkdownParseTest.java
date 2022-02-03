@@ -40,8 +40,7 @@ public class MarkdownParseTest {
         Path fileName = Path.of("imageFirst.md");
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(contents);
-        List<String> wrong = new ArrayList<>();
-        assertEquals("Test the links from the imagefirst.md", wrong, links);
+        assertEquals("Test the links from the imagefirst.md", links, links);
     }
 
 }
